@@ -10,12 +10,13 @@ public class Palindromo {
 		try{
 			Scanner arquivo = new Scanner(new FileReader("c:\\Lista-de-Palavras.txt"));
 			String linha;
-			System.out.println("Entrada\t\t\tSaÌda");
+			System.out.println("Entrada\t\t\tSa√≠da");
 			while (arquivo.hasNext()) {
 				linha = arquivo.next();
 				System.out.println(linha+"\t\t\t"+verificaPali(linha));
 			}
 			arquivo.close();
+			System.gc();
 		} catch(IOException e){			
 			System.err.printf("Erro ao processar arquivo.\n", e.getMessage());
 		}
@@ -27,7 +28,7 @@ public class Palindromo {
         if(palavra.equals(inverso.reverse().toString())) {  
             retorno = "sim";
         } else {  
-        	retorno = "n„o";  
+        	retorno = "n√£o";  
         }  
         
         return retorno;
